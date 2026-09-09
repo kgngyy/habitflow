@@ -1,0 +1,61 @@
+.habit-form {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.habit-form h2 { font-size: 1.2rem; }
+
+.habit-form__label { display: flex; flex-direction: column; gap: 6px; font-weight: 600; }
+
+.habit-form__label input {
+  padding: 12px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 1rem;
+  width: 100%;
+}
+
+.habit-form__row { display: flex; flex-direction: column; gap: 8px; }
+
+.habit-form__label-text { font-weight: 600; }
+
+.habit-form__colors, .habit-form__days { display: flex; flex-wrap: wrap; gap: 8px; }
+
+.habit-form__color {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 2px solid transparent;
+}
+
+.habit-form__color.is-active { border-color: var(--text); }
+
+.habit-form__day {
+  min-width: 44px;
+  min-height: 44px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--card);
+  font-weight: 600;
+}
+
+.habit-form__day.is-active { background: var(--accent); color: #fff; border-color: var(--accent); }
+
+.habit-form__error { color: #e5484d; margin: 0; font-size: 0.9rem; }
+
+.habit-form__submit {
+  background: var(--accent);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  padding: 14px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.habit-form__submit:hover { opacity: 0.9; }

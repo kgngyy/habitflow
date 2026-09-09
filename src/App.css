@@ -1,0 +1,93 @@
+.nav {
+  display: flex;
+  gap: 12px;
+  padding: 12px 0;
+  margin-bottom: 8px;
+}
+
+.nav a {
+  text-decoration: none;
+  color: var(--accent);
+  font-weight: 600;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: var(--card);
+  border: 1px solid var(--border);
+}
+
+.nav a:hover { background: #eef3ff; }
+
+.page { display: flex; flex-direction: column; gap: 20px; }
+
+.header h1 { font-size: 1.8rem; }
+
+.header__subtitle { color: var(--muted); margin: 4px 0 12px; }
+
+.empty-state { color: var(--muted); text-align: center; padding: 32px 0; }
+
+.back-link {
+  display: inline-block;
+  color: var(--accent);
+  text-decoration: none;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+/* Прогресс-бар */
+.progressbar {
+  height: 10px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+  margin: 8px 0;
+}
+
+.progressbar__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+  transition: width 0.3s ease;
+}
+
+/* Сетка привычек (адаптивная) */
+.habit-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 16px;
+}
+
+@media (max-width: 768px) {
+  .habit-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 480px) {
+  .habit-grid { grid-template-columns: 1fr; }
+  #root { padding: 12px; }
+}
+
+/* Статистика */
+.stats { display: flex; flex-direction: column; gap: 10px; }
+
+.stats__bar {
+  display: grid;
+  grid-template-columns: 32px 1fr 44px;
+  gap: 10px;
+  align-items: center;
+}
+
+.stats__label { font-size: 0.85rem; color: var(--muted); }
+
+.stats__track {
+  height: 12px;
+  background: var(--border);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.stats__fill {
+  height: 100%;
+  background: var(--accent);
+  border-radius: 999px;
+}
+
+.stats__value { font-size: 0.85rem; color: var(--muted); text-align: right; }
